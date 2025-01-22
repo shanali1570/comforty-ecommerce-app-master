@@ -5,9 +5,11 @@ import { CiCircleCheck } from "react-icons/ci";
 import { CiCreditCard1 } from "react-icons/ci";
 import { LuSprout } from "react-icons/lu";
 import Link from 'next/link';
+import Container from '@/components/Container';
 
 const Page = () => {
   return (
+    <Container className="py-10">
     <div className="w-full px-4 sm:px-8 lg:px-32 py-8 mb-10 lg:mb-48">
       <div className="flex flex-col lg:flex-row justify-between gap-4">
         {/* Left Section: About Us */}
@@ -41,53 +43,57 @@ const Page = () => {
       </div>
 
 
-      <div className='mt-28'>
-        <h1 className='text-center font-bold text-[25px]'>What makes our Brand Different</h1>
-        
-        <div className='mt-10 flex items-center justify-between'>
-          <div className='w-[300px] h-[244px] flex items-center justify-center hover:border-2'>
-              <div className='w-[213px] h-[148px] text-[#007580] space-y-2'>
-              <FaTruckFast />
-                <h2 className='text-[18px]'>Next day as standard</h2>
-                <p className='text-[14px]'>Order before 3pm and get your order the next day as standard</p>
+      <div className="mt-28">
+  <h1 className="text-center font-bold text-[22px] sm:text-[25px]">
+    What Makes Our Brand Different
+  </h1>
 
-              </div>
-
-          </div>
-          
-
-          <div className='w-[300px] h-[244px] flex items-center justify-center hover:border-2'>
-              <div className='w-[213px] h-[148px] text-[#007580] space-y-2'>
-              <CiCircleCheck />
-                <h2 className='text-[18px]'>Made by true artisans</h2>
-                <p className='text-[14px]'>Handmade crafted goods made with real passion and craftmanship</p>
-
-              </div>
-
-          </div>
-
-          <div className='w-[300px] h-[244px] flex items-center hover:border-2 justify-center'>
-              <div className='w-[213px] h-[148px] text-[#007580] space-y-2'>
-              <CiCreditCard1 />
-                <h2 className='text-[18px]'>Unbeatable prices</h2>
-                <p className='text-[14px]'>For our materials and quality you won’t find better prices anywhere</p>
-
-              </div>
-
-          </div>
-
-          <div className='w-[300px] h-[244px] hover:border-2 flex items-center justify-center'>
-              <div className='w-[213px] h-[148px] text-[#007580] space-y-2'>
-              <LuSprout />
-                <h2 className='text-[18px]'>Recycled packaging</h2>
-                <p className='text-[14px]'>We use 100% recycled to ensure our footprint is more manageable</p>
-
-              </div>
-
-          </div>
-
-        </div>
+  <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {/* Feature 1 */}
+    <div className="flex flex-col items-center text-center hover:border-2 p-4 rounded-lg">
+      <div className="text-[#007580] text-3xl mb-4">
+        <FaTruckFast />
       </div>
+      <h2 className="text-[18px] font-bold mb-2">Next day as standard</h2>
+      <p className="text-[14px]">
+        Order before 3pm and get your order the next day as standard
+      </p>
+    </div>
+
+    {/* Feature 2 */}
+    <div className="flex flex-col items-center text-center hover:border-2 p-4 rounded-lg">
+      <div className="text-[#007580] text-3xl mb-4">
+        <CiCircleCheck />
+      </div>
+      <h2 className="text-[18px] font-bold mb-2">Made by true artisans</h2>
+      <p className="text-[14px]">
+        Handmade crafted goods made with real passion and craftsmanship
+      </p>
+    </div>
+
+    {/* Feature 3 */}
+    <div className="flex flex-col items-center text-center hover:border-2 p-4 rounded-lg">
+      <div className="text-[#007580] text-3xl mb-4">
+        <CiCreditCard1 />
+      </div>
+      <h2 className="text-[18px] font-bold mb-2">Unbeatable prices</h2>
+      <p className="text-[14px]">
+        For our materials and quality you won’t find better prices anywhere
+      </p>
+    </div>
+
+    {/* Feature 4 */}
+    <div className="flex flex-col items-center text-center hover:border-2 p-4 rounded-lg">
+      <div className="text-[#007580] text-3xl mb-4">
+        <LuSprout />
+      </div>
+      <h2 className="text-[18px] font-bold mb-2">Recycled packaging</h2>
+      <p className="text-[14px]">
+        We use 100% recycled to ensure our footprint is more manageable
+      </p>
+    </div>
+  </div>
+</div>
 
 
       <div className='mt-28'>
@@ -158,6 +164,7 @@ const Page = () => {
 
         </div>
       </div>
+      </Container>
     
   );
 };

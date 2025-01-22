@@ -15,12 +15,23 @@ interface Product {
 
 const MidHeader = ({ products }: { products: Product[] }) => {
   return (
-    <div className="bg-[#f0f3f3] text-accent lg:h-14">
-      <Container className="h-full flex justify-between items-center gap-10">
-        <Logo />
-        <SearchInput products={products} />
-        <WishlistLink />
-        <ButtonCart />
+    <div className="bg-[#f0f3f3] text-accent w-full lg:h-16 h-auto">
+      <Container className="h-full flex flex-col sm:flex-row justify-between items-center gap-4 lg:gap-10 py-3 sm:py-0">
+        {/* Logo */}
+        <div className="w-full sm:w-auto flex justify-center sm:justify-start">
+          <Logo />
+        </div>
+
+        {/* Search Input */}
+        <div className="flex-1 w-full sm:w-auto">
+          <SearchInput products={products} />
+        </div>
+
+        {/* Wishlist and Cart */}
+        <div className="w-full sm:w-auto flex justify-center sm:justify-end items-center gap-4">
+          <WishlistLink />
+          <ButtonCart />
+        </div>
       </Container>
     </div>
   );
